@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form name="registration" onsubmit="return formValidation()">
+            <h2>Registration Form</h2>
+
+            <label for="userid">User ID:</label>
+            <input type="text" name="userid" placeholder="Enter User ID">
+
+            <label for="passid">Password:</label>
+            <input type="password" name="passid" placeholder="Enter Password">
+
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Enter Username">
+
+            <label for="address">Address:</label>
+            <input type="text" name="address" placeholder="Enter Address">
+
+            <label for="country">Country:</label>
+            <select name="country">
+                <option value="Default">Select Country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+            </select>
+
+            <label for="zip">ZIP Code:</label>
+            <input type="text" name="zip" placeholder="Enter ZIP Code">
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" placeholder="Enter Email">
+
+            <label>Gender:</label>
+            <input type="radio" name="msex" value="Male"> Male
+            <input type="radio" name="fsex" value="Female"> Female
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
