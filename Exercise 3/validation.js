@@ -6,8 +6,7 @@ function formValidation() {
     var ucountry = document.registration.country;
     var uzip = document.registration.zip;
     var uemail = document.registration.email;
-    var umsex = document.registration.msex;
-    var ufsex = document.registration.fsex;
+    var gender = document.registration.gender;
 
     if (useridValidation(uid, 5, 12)) {
         if (passwordValidation(passid, 7, 12)) {
@@ -16,7 +15,7 @@ function formValidation() {
                     if (countrySelect(ucountry)) {
                         if (allNumeric(uzip)) {
                             if (validateEmail(uemail)) {
-                                if (validateSex(umsex, ufsex)) {
+                                if (validateGender(gender)) {
                                     alert("Form Successfully Submitted!");
                                     return true;
                                 }
@@ -103,10 +102,10 @@ function validateEmail(uemail) {
     }
 }
 
-function validateSex(umsex, ufsex) {
-    if (!umsex.checked && !ufsex.checked) {
-        alert("Please select Male or Female.");
-        umsex.focus();
+function validateGender(gender) {
+    if (gender.value === "") {
+        alert("Please select a gender.");
+        gender.focus();
         return false;
     }
     return true;

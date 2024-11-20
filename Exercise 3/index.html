@@ -15,11 +15,11 @@
             <label for="userid">User ID:</label>
             <input type="text" name="userid" placeholder="Enter User ID">
 
-            <label for="passid">Password:</label>
-            <input type="password" name="passid" placeholder="Enter Password">
-
             <label for="username">Username:</label>
             <input type="text" name="username" placeholder="Enter Username">
+
+            <label for="passid">Password:</label>
+            <input type="password" name="passid" placeholder="Enter Password">            
 
             <label for="address">Address:</label>
             <input type="text" name="address" placeholder="Enter Address">
@@ -38,9 +38,13 @@
             <label for="email">Email:</label>
             <input type="text" name="email" placeholder="Enter Email">
 
-            <label>Gender:</label>
-            <input type="radio" name="msex" value="Male"> Male
-            <input type="radio" name="fsex" value="Female"> Female
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>  
 
             <button type="submit">Submit</button>
         </form>
